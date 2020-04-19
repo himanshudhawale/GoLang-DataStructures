@@ -20,7 +20,11 @@ func NewArray(leng uint) *Array {
 	}
 }
 
-// give index it will return the element
+func (a *Array) Len() uint {
+	return a.length
+}
+
+
 func (a *Array) Find(index uint) (int, error) {
 	if a.isIndexOutOfRange(index) {
 		return 0, errors.New("Index out of range!")
@@ -32,11 +36,7 @@ func (a *Array) isIndexOutOfRange(index uint) bool {
 	return index >= a.length
 }
 
-func (a *Array) Len() uint {
-	return a.length
-}
 
-// insert values on index
 func (a *Array) Insert(index uint, v int) error {
 	if a.Len() == uint(cap(a.values)) {
 		return errors.New("Array is full!")
@@ -52,12 +52,10 @@ func (a *Array) Insert(index uint, v int) error {
 	return nil
 }
 
-// InsertToTail inserts v on tail
 func (a *Array) InsertToTail(v int) error {
 	return a.Insert(a.Len(), v)
 }
 
-// Delete deletes element at index
 func (a *Array) Delete(index uint) (int, error) {
 	if a.isIndexOutOfRange(index) {
 		return 0, errors.New("Index out of range!")
@@ -70,7 +68,6 @@ func (a *Array) Delete(index uint) (int, error) {
 	return v, nil
 }
 
-// Print prints the array
 func (a *Array) Print() {
 	var format string
 	for i := uint(0); i < a.Len(); i++ {

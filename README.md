@@ -2,6 +2,7 @@
 
 `B` - Beginner, `A` - Advanced
 
+* `B` [Arrays](./Arrays)
 * `B` [Linked List](./linked-list)
 * `B` [Doubly Linked List](./doubly-linked-list)
 * `B` [Queue](./queue)

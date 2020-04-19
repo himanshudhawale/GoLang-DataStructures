@@ -5,3 +5,4 @@
 *  [Arrays](./Arrays)
 *  [Linked List](./Linked-List)
 *  [Stack](./Stack)
+*  [Queue](./Queue)

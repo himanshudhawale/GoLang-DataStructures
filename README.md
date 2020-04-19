@@ -3,4 +3,4 @@
 
 
 *  [Arrays](./Arrays)
-*  [Linked List](./linked-list)
+*  [Linked List](./Linked-List)
